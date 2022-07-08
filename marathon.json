@@ -1,0 +1,22 @@
+{
+  "id": "/httpenv",
+  "env": {
+    "ENV1": "Hello Environment Variables"
+  },
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 128,
+  "container": {
+    "docker": {
+      "image": "flakio/httpenv:1",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp",
+          "name": "http"
+        }
+      ],
+      "network": "BRIDGE"
+    }
+  }
+}
